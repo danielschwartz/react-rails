@@ -19,6 +19,7 @@ module React
       # Watch .jsx files for changes in dev, so we can reload the JS VMs with the new JS code.
       initializer "react_rails.add_watchable_files", group: :all do |app|
         app.config.watchable_files.concat Dir["#{app.root}/app/assets/javascripts/**/*.jsx*"]
+        app.config.watchable_files.concat Dir["#{app.root}/app/assets/javascripts/**/*.es6*"]
       end
 
       # Include the react-rails view helper lazily
