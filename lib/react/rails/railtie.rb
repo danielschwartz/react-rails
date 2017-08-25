@@ -40,7 +40,7 @@ module React
         })
 
         app.assets.version = [
-          app.assets.version,
+          app.config.assets.version,
           "react-#{asset_variant.react_build}",
         ].compact.join('-')
       end
